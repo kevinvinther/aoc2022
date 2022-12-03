@@ -31,11 +31,21 @@ mod tests {
 
     #[test]
     fn test1() {
-        assert_eq!(part1(&input_generator(include_str!("../input/2022/test/day1.txt"))), 24000);
+        assert_eq!(
+            part1(&input_generator(include_str!(
+                "../input/2022/test/day1.txt"
+            ))),
+            24000
+        );
     }
 
     #[test]
     fn test2() {
-        assert_eq!(part2(&input_generator(include_str!("../input/2022/test/day1.txt"))), 45000)
+        assert_eq!(
+            part2(&input_generator(include_str!(
+                "../input/2022/test/day1.txt"
+            ))),
+            45000
+        )
     }
 }
