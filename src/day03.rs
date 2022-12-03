@@ -34,9 +34,9 @@ fn char_to_alphabet_number(c: char) -> u64 {
     let a = b'a';
     let capital_a = b'A';
 
-    if c >= 'a' && c <= 'z' {
+    if ('a'..='z').contains(&c) {
         (c as u8 - a + 1) as u64
-    } else if c >= 'A' && c <= 'Z' {
+    } else if ('A'..='Z').contains(&c) {
         (c as u8 - capital_a + 27) as u64
     } else {
         panic!("Invalid character: {}", c);
@@ -80,7 +80,7 @@ pub fn part2(input: &str) -> u64 {
 
     for i in 0..*lines {
         if i % 3 == 0 {
-            commons.push(common_chars(&input[i], &input[i + 1], &input[i + 2]));
+            commons.push(common_chars(input[i], input[i + 1], input[i + 2]));
         }
     }
 

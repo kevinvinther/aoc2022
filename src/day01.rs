@@ -16,12 +16,12 @@ pub fn input_generator(input: &str) -> Vec<u64> {
 }
 
 #[aoc(day1, part1)]
-pub fn part1(input: &Vec<u64>) -> u64 {
+pub fn part1(input: &[u64]) -> u64 {
     input[0]
 }
 
 #[aoc(day1, part2)]
-pub fn part2(input: &Vec<u64>) -> u64 {
+pub fn part2(input: &[u64]) -> u64 {
     input[0] + input[1] + input[2]
 }
 

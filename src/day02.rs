@@ -22,16 +22,16 @@ pub fn part1(input: &str) -> u64 {
         .lines()
         .map(|line| {
             let moves: Vec<&str> = line.trim().split(' ').collect();
-            let opponent = match &moves[0] {
-                &"A" => OpponentMove::Rock,
-                &"B" => OpponentMove::Paper,
-                &"C" => OpponentMove::Scissors,
+            let opponent = match moves[0] {
+                "A" => OpponentMove::Rock,
+                "B" => OpponentMove::Paper,
+                "C" => OpponentMove::Scissors,
                 _ => unreachable!("Invalid opponent move"),
             };
-            let player = match &moves[1] {
-                &"X" => PlayerMove::Rock,
-                &"Y" => PlayerMove::Paper,
-                &"Z" => PlayerMove::Scissors,
+            let player = match moves[1] {
+                "X" => PlayerMove::Rock,
+                "Y" => PlayerMove::Paper,
+                "Z" => PlayerMove::Scissors,
                 _ => unreachable!("Invalid player move"),
             };
             (opponent, player)
@@ -76,16 +76,16 @@ pub fn part2(input: &str) -> u64 {
         .lines()
         .map(|line| {
             let moves: Vec<&str> = line.trim().split(' ').collect();
-            let opponent = match &moves[0] {
-                &"A" => OpponentMove::Rock,
-                &"B" => OpponentMove::Paper,
-                &"C" => OpponentMove::Scissors,
+            let opponent = match moves[0] {
+                "A" => OpponentMove::Rock,
+                "B" => OpponentMove::Paper,
+                "C" => OpponentMove::Scissors,
                 _ => unreachable!("Invalid opponent move"),
             };
-            let result = match &moves[1] {
-                &"X" => GameResult::Lose,
-                &"Y" => GameResult::Draw,
-                &"Z" => GameResult::Win,
+            let result = match moves[1] {
+                "X" => GameResult::Lose,
+                "Y" => GameResult::Draw,
+                "Z" => GameResult::Win,
                 _ => unreachable!("Invalid player move"),
             };
             (opponent, result)
